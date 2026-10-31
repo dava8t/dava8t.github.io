@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<html scrollbehavior="smooth">
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,31 +35,35 @@
         <section id="formulario">
             <form action="https://api.web3forms.com/submit" method="post">
                 <input type="hidden" name="access_key" value="d6d2b60c-1ef6-4647-b1ba-8cd61799b086">
-                
                 <!--nombre-->
                 <div>
                     <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" name="nombre" >
+                    <input id="nombre" type="text" name="nombre" required>
                 </div>
                 <!--email-->
                 <div>
                     <label for="email">Email:  </label>
-                    <input id="email" type="email" name="email" multiple>
+                    <input id="email" type="email" name="email" multiple required>
                 </div>
-                <!--mensaje-->
+                <!--telefono-->
                 <div>
-                    <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
-                    <textarea id="mensaje" cols="20" rows="1" name="mensaje"></textarea>
+                    <label for="telefono">Numero Telefonico:</label>
+                    <input id="telefono" type="tel" name="telefono" required>
                 </div>
                 <!--numero-->
                 <div>
-                    <label for="numero">Numero favorito de 1 al 10</label>
-                    <input id="numero" type="number" name="numero" min="1" max="10">
+                    <label for="numero">Califica esta pagina del 1 al 10</label>
+                    <input id="numero" type="number" name="numero" min="1" max="10" required>
                 </div>
                 <!--nacimiento-->
                 <div>
                     <label for="fecha">Dia de nacimiento:</label>
-                    <input id="fecha" type="date" name="fecha">
+                    <input id="fecha" type="date" name="fecha" required>
+                </div>
+                <!--mensaje-->
+                <div>
+                    <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
+                    <textarea id="mensaje" cols="20" rows="1" name="mensaje" required></textarea>
                 </div>
                 <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Enviar</button>
@@ -81,12 +86,12 @@
                 <figcaption>Este es un meme del caballerito</figcaption>
             </figure>
             <figure>
-                    <img src="imagenes/caballerito_epico.jpeg" alt="el caballerito pero mas epico" width="300" height="360">
+                    <img src="imagenes/caballerito_epico.jpg" alt="el caballerito pero mas epico" width="300" height="360">
                     <figcaption>Este es el caballerito posando</figcaption>
             </figure>
             <figure>
-                <img src="imagenes/absolute_radiance.jpeg" alt="Imagen de absolute_radiance" width="300" height="320">
-                <figcaption>una imagen de absolute_radiance</figcaption>
+                <img src="imagenes/absolute_radiance.jpg" alt="Imagen de absolute_radiance" width="300" height="320">
+                <figcaption>una imagen de absolute radiance</figcaption>
             </figure>
         </section>
         <!--Clase de Listas y Vinculos-->
