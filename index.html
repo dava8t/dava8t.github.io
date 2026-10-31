@@ -10,6 +10,7 @@
         <h2>Hola, soy David y esta es mi pagina web, bienvenido al menu principal</h2>
     <nav>
         <ul>
+            <li><a href="#formulario">Formularios</a></li>
             <li><a href="#textos">Textos</a></li>
             <li><a href="#imagenes">Imagenes</a></li>
             <li><a href="#listas">Listas</a></li>
@@ -18,6 +19,28 @@
     </nav>
     </header>
     <main>
+        <!--Clase de formularios-->
+        <section id="formulario">
+            <form action="https://api.web3forms.com/submit" method="post">
+                <input type="hidden" name="access_key" value="c2b9577a-674a-458b-bc98-7e6771863e2a">
+                
+                <div>
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" name="nombre" >
+                </div>
+                <!--email-->
+                <div>
+                    <label for="email">Email:  </label>
+                    <input id="email" type="email" name="email" >
+                </div>
+                <!--mensaje-->
+                <div>
+                    <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
+                    <textarea id="mensaje" cols="20" rows="5" name="mensaje"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
         <!--Clase de Textos-->
         <section id="textos">
             <h1>Este es el titulo principal</h1>   
