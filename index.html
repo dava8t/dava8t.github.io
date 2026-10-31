@@ -24,7 +24,7 @@
         <section id="formulario">
             <form action="https://api.web3forms.com/submit" method="post">
                 <input type="hidden" name="access_key" value="d6d2b60c-1ef6-4647-b1ba-8cd61799b086">
-                <div class="h-captcha" data-captcha="true"></div>
+                
                 <!--nombre-->
                 <div>
                     <label for="nombre">Nombre:</label>
@@ -40,6 +40,11 @@
                     <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
                     <textarea id="mensaje" cols="20" rows="5" name="mensaje"></textarea>
                 </div>
+                <div>
+                    <label for="edad">Edad:</label>
+                    <input id="edad" type="number" name="edad">
+                </div>
+                <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Enviar</button>
             </form>
         </section>
