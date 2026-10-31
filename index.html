@@ -9,6 +9,16 @@
     <header>
         <h2>Hola, soy David y esta es mi pagina web, bienvenido al menu principal</h2>
     <nav>
+            <label for="search">Ir a:</label>
+            <input id="search" type="search" list="opciones de menu" onchange="document.getElementById(this.value)?.scrollIntoView({behavior: 'smooth'});">
+            <datalist id="opciones de menu">
+                <option value="menu">
+                <option value="formulario">
+                <option value="textos">
+                <option value="imagenes">
+                <option value="listas">
+                <option value="contacto">
+            </datalist>
         <ul id="menu">
             <li><a href="#menu">Menu</a></li>
             <li><a href="#formulario">Formularios</a></li>
@@ -33,16 +43,22 @@
                 <!--email-->
                 <div>
                     <label for="email">Email:  </label>
-                    <input id="email" type="email" name="email" >
+                    <input id="email" type="email" name="email" multiple>
                 </div>
                 <!--mensaje-->
                 <div>
                     <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
-                    <textarea id="mensaje" cols="20" rows="5" name="mensaje"></textarea>
+                    <textarea id="mensaje" cols="20" rows="1" name="mensaje"></textarea>
                 </div>
+                <!--numero-->
                 <div>
-                    <label for="edad">Edad:</label>
-                    <input id="edad" type="number" name="edad">
+                    <label for="numero">Numero favorito de 1 al 10</label>
+                    <input id="numero" type="number" name="numero" min="1" max="10">
+                </div>
+                <!--nacimiento-->
+                <div>
+                    <label for="fecha">Dia de nacimiento:</label>
+                    <input id="fecha" type="date" name="fecha">
                 </div>
                 <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Enviar</button>
@@ -67,6 +83,10 @@
             <figure>
                     <img src="imagenes/caballerito_epico.jpeg" alt="el caballerito pero mas epico" width="300" height="360">
                     <figcaption>Este es el caballerito posando</figcaption>
+            </figure>
+            <figure>
+                <img src="imagenes/absolute_radiance.jpeg" alt="Imagen de absolute_radiance" width="300" height="320">
+                <figcaption>una imagen de absolute_radiance</figcaption>
             </figure>
         </section>
         <!--Clase de Listas y Vinculos-->
