@@ -9,6 +9,17 @@
     <body>
     <header>
         <h2>Hola, soy David y esta es mi pagina web, bienvenido al menu principal</h2>
+        <label for="tamaño">Tamaño del texto:</label>
+        <input id="tamaño" type="range" min="12" max="32" step="1" value="16" onchange="document.body.style.fontSize=this.value+'px'">
+        <output class="tamaño-output" for="tamaño"></output>
+        <script>
+            const tamaño = document.querySelector("#tamaño");
+            const output = document.querySelector(".tamaño-output");
+            output.textContent = tamaño.value;
+            tamaño.addEventListener("input", () => {
+            output.textContent = tamaño.value;
+            });
+        </script>
     <nav>
             <label for="search">Ir a:</label>
             <input id="search" type="search" list="opciones de menu" onchange="document.getElementById(this.value)?.scrollIntoView({behavior: 'smooth'});">
@@ -50,20 +61,30 @@
                     <label for="telefono">Numero Telefonico:</label>
                     <input id="telefono" type="tel" name="telefono" required>
                 </div>
-                <!--nacimiento-->
+                <!--dia de nacimiento-->
                 <div>
                     <label for="fecha">Dia de nacimiento:</label>
-                    <input id="fecha" type="date" name="fecha" required>
+                    <input id="fecha" type="date" name="fecha" min="1926-01-01" max="2015-01-01" required>
+                </div>
+                <!--color-->
+                <div>
+                <label for="color">Escoge un color</label>
+                <input type="color" name="color" id="color" required>
                 </div>
                  <!--numero-->
                 <div>
                     <label for="numero">Califica esta pagina del 1 al 10</label>
-                    <input id="numero" type="number" name="numero" min="1" max="10" required>
+                    <input id="numero" type="number" name="numero" min="1" max="10" step="0.01" required>
                 </div>
                 <!--mensaje-->
                 <div>
                     <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
                     <textarea id="mensaje" cols="20" rows="1" name="mensaje" required></textarea>
+                </div>
+                <!--pagina web-->
+                <div>
+                    <label for="pagina">Tienes un pagina?, compartela conmigo:</label>
+                    <input type="url" name="pagina web" id="pagina">
                 </div>
                 <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Enviar</button>
