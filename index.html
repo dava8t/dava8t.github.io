@@ -7,8 +7,9 @@
     <title>Pagina web de David</title>
     </head>
     <body>
-    <header>
-        <h2>Hola, soy David y esta es mi pagina web, bienvenido al menu principal</h2>
+        <header>
+        <h1>Mi pagina web</h1>
+        <h2>Configuracion</h2>
         <label for="tamaño">Tamaño del texto:</label>
         <input id="tamaño" type="range" min="12" max="32" step="1" value="16" onchange="document.body.style.fontSize=this.value+'px'">
         <output class="tamaño-output" for="tamaño"></output>
@@ -20,30 +21,31 @@
             output.textContent = tamaño.value;
             });
         </script>
-    <nav>
-            <label for="search">Ir a:</label>
-            <input id="search" type="search" list="opciones de menu" onchange="document.getElementById(this.value)?.scrollIntoView({behavior: 'smooth'});">
-            <datalist id="opciones de menu">
+            <nav>
+                <h2>Menu</h2>
+                <label for="search">Ir a:</label>
+                <input id="search" type="search" list="opciones de menu" onchange="document.getElementById(this.value)?.scrollIntoView({behavior: 'smooth'});">
+                <datalist id="opciones de menu">
                 <option value="menu">
                 <option value="formulario">
                 <option value="textos">
                 <option value="imagenes">
                 <option value="listas">
                 <option value="contacto">
-            </datalist>
-        <ul id="menu">
+                </datalist>
+                <ul id="menu">
             <li><a href="#menu">Menu</a></li>
             <li><a href="#formulario">Formularios</a></li>
             <li><a href="#textos">Textos</a></li>
             <li><a href="#imagenes">Imagenes</a></li>
             <li><a href="#listas">Listas</a></li>
             <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
-    </header>
-    <main>
-        <!--Clase de formularios-->
-        <section id="formulario">
+                </ul>
+             </nav>
+        </header>
+        <main>
+            <!--Clase de formularios-->
+            <section id="formulario">
             <form action="https://api.web3forms.com/submit" method="post">
                 <input type="hidden" name="access_key" value="d6d2b60c-1ef6-4647-b1ba-8cd61799b086">
                 <!--nombre-->
@@ -89,18 +91,27 @@
                 <div class="h-captcha" data-captcha="true"></div>
                 <button type="submit">Enviar</button>
             </form>
-        </section>
-        <!--Clase de Textos-->
-        <section id="textos">
-            <h1>Este es el titulo principal</h1>   
-            <h2>Este es el subtitulo</h2>
-            <h4>y puedo seguir asi hasta seis tamaños</h4>
-            <h6>y este es el titulo mas pequeño</h6>
-            <p>Este es un parrafo de texto, puedo escribir lo que quiera aqui y se mostrara en la pagina web, ademas puedo <strong>resaltar algo importante
+            </section>
+            <!--Clase de Textos-->
+            <section id="textos">
+                <nav>
+                    
+                </nav>
+            <h1>El sistema solar</h1>   
+            <h2>El sol</h2>
+            <p>El sol es una estrella </p>
+            <h2>Los planetas</h2>
+            <h3>Planetas rocosos</h3>
+            <h4>Mercurio</h4>
+            <p>Mercurio es el planeta más pequeño y el más cercano al sol en el sistema solar.
+            La temperatura en un dia normal oscila entre los <strong>-173°C y 427°C</strong> y su gravedad es de <strong>3.7 m/s²</strong></p>
+            </p>
+            <h6></h6>
+            <p>las manzanas son rojas, se puede ver visualmente pero <strong> por que son rojas
             </strong><blockquote>"Y puedo hacer citas como en una monografia"</blockquote></p>
-        </section>
-        <!--Clase de Imagenes-->
-        <section id="imagenes">
+            </section>
+            <!--Clase de Imagenes-->
+            <section id="imagenes">
             <h2>Tambien puedo poner imagenes</h2>
             <figure>
                 <img src="imagenes/caballerito_apio.jpg" alt="un meme del caballerito" width="300" height="360">
@@ -114,9 +125,9 @@
                 <img src="imagenes/absolute_radiance.jpg" alt="Imagen de absolute_radiance" width="300" height="320">
                 <figcaption>una imagen de absolute radiance</figcaption>
             </figure>
-        </section>
-        <!--Clase de Listas y Vinculos-->
-        <section id="listas">
+            </section>
+            <!--Clase de Listas y Vinculos-->
+            <section id="listas">
             <h2>Tambien puedo hacer listas, como la receta de una<blockquote>napolitana de fresa y crema</blockquote></h2>
             <ul>
                 <li>1 paquete de GALLETAS MORENITAS NESTLÉ® (23 g)</li>
@@ -129,16 +140,16 @@
                 <li>Sobre una galleta MORENITAS NESTLÉ® esparce la mitad de la crema y encima pon láminas de fresas en partes iguales.</li>
             </ol>
             <p>Tambien puedo poner vinculos a otras paginas web, aqui esta el <a href="https://www.recetasnestle.com.co/recetas/napolitana-de-fresa-y-crema" target="_blank">vinculo a la receta</a></p>
-        </section>
-    </main>
-    <footer>
+            </section>
+        </main>
+        <footer>
         <!--contacto-->
         <section id="contacto">
             <h2>Contacto</h2>
             <p>Si tienes alguna idea de que deberia agregarle mandamela a <a href="mailto:dava8t@gmail.com?subject=Idea%20para%20la%20pagina%20web&body=Hola%20David,%20tengo%20una%20idea%20para%20tu%20pagina%20web:" target="_blank" rel="noopener">este gmail</a> o a <a href="https://wa.me/3117896485?text=Hola%20David,%20tengo%20una%20idea%20para%20tu%20pagina%20web:" target="_blank" rel="noopener">este whatsapp</a></p>
             <p><small>si no funciona el gmail puedes hacer click <a href="https://mail.google.com/mail/?view=cm&to=dava8t@gmail.com&su=Idea%20para%20la%20pagina%20web&body=Hola%20David,%20tengo%20una%20idea%20para%20tu%20pagina%20web:" target="_blank" rel="noopener">en este link</a></small></p>
         </section>
-    </footer>
-    <script src="https://web3forms.com/client/script.js" async defer></script>
+        </footer>
+        <script src="https://web3forms.com/client/script.js" async defer></script>
     </body>
 </html>
