@@ -21,19 +21,19 @@
             output.textContent = tamaño.value;
             });
         </script>
-            <nav>
-                <h2>Menu</h2>
+            <menu id="menu">
+                <h2>Menú</h2>
                 <label for="search">Ir a:</label>
                 <input id="search" type="search" list="opciones de menu" onchange="document.getElementById(this.value)?.scrollIntoView({behavior: 'smooth'});">
                 <datalist id="opciones de menu">
-                <option value="menu">
+                <option value="menú">
                 <option value="formulario">
                 <option value="textos">
                 <option value="imagenes">
                 <option value="listas">
                 <option value="contacto">
                 </datalist>
-                <ul id="menu">
+                <ul>
             <li><a href="#menu">Menu</a></li>
             <li><a href="#formulario">Formularios</a></li>
             <li><a href="#textos">Textos</a></li>
@@ -41,8 +41,9 @@
             <li><a href="#listas">Listas</a></li>
             <li><a href="#contacto">Contacto</a></li>
                 </ul>
-             </nav>
+            </menu>
         </header>
+        <hr>
         <main>
             <!--Clase de formularios-->
             <section id="formulario">
@@ -78,6 +79,16 @@
                     <label for="numero">Califica esta pagina del 1 al 10</label>
                     <input id="numero" type="number" name="numero" min="1" max="10" step="0.01" required>
                 </div>
+                <!--Genero-->
+                <div>
+                   <fieldset>
+                    <legend>Genero:</legend>
+                    <input type="radio" name="genero" id="masculino" value="M" required>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="genero" id="femenino" value="F" required>
+                    <label for="femenino">Femenino</label>
+                   </fieldset>
+                </div>
                 <!--mensaje-->
                 <div>
                     <label for="mensaje">Mensaje:<small>(puedes cambiar el tamaño del recuadro)</small></label>
@@ -92,6 +103,7 @@
                 <button type="submit">Enviar</button>
             </form>
             </section>
+            <hr>
             <!--Clase de Textos-->
             <section id="textos">
             <!--lista con descripiciones-->
@@ -112,6 +124,7 @@
                 </dd>
             </dl>
             </section>
+            <hr>
             <!--Clase de Imagenes-->
             <section id="imagenes">
             <h2>Tambien puedo poner imagenes</h2>
@@ -128,6 +141,7 @@
                 <figcaption>una imagen de absolute radiance</figcaption>
             </figure>
             </section>
+            <hr>
             <!--Clase de Listas y Vinculos-->
             <section id="listas">
             <h2>Tambien puedo hacer listas, como la receta de una<blockquote>napolitana de fresa y crema</blockquote></h2>
@@ -144,6 +158,7 @@
             <p>Tambien puedo poner vinculos a otras paginas web, aqui esta el <a href="https://www.recetasnestle.com.co/recetas/napolitana-de-fresa-y-crema" target="_blank">vinculo a la receta</a></p>
             </section>
         </main>
+        <hr>
         <footer>
         <!--contacto-->
         <section id="contacto">
